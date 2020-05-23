@@ -22,11 +22,12 @@ bot.on('ready', function (evt) {
 
 var defaultAction = function(){
     if(nopeYepFlag)
-        return 'yup!'
+        ret = 'yup!'
     else
-        return 'nope!'
+        ret = 'nope!'
     
     nopeYepFlag = !nopeYepFlag;
+    return ret;
 }
 
 var determineChoice = function(message){
