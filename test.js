@@ -1,5 +1,8 @@
 var determine = require('./bot').determine
 
+process.env.E40_PORT = 5000
+var server = require('./server')
+
 ~function(){
     console.log(determine("Y'all still be poppin' y'all collars?"))
     console.log(determine('hello?'))
