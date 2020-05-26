@@ -38,7 +38,7 @@ exports.negativeGhostRiderRegex = [
     /if (i|you) get into it will run/,
     /(still )?live in the trap/,
     /wear a wire and a camera/,
-].map(s => s.toLowerCase())
+]
 
 exports.affirmativeRegex = [
     /(ever|eva) squeezed a trigger/,
@@ -79,7 +79,7 @@ exports.affirmativeRegex = [
     /(i'?m?ma\s)?give a nigga fair one/,
     /(you )?ev(er|a) go back/,
     /ears to the scanner/,
-].map(s => s.toLowerCase())
+]
 
 exports.negativeGhostRider = [
     "Ever told on a nigga",
