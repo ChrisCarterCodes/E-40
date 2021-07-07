@@ -36,11 +36,17 @@ var defaultAction = function(){
 
 var determineChoice = function(message){
     // We looking for questions, fam.
+    let isNo = isYes = false
     if (message.slice(-1) == '?') {
         message = message.substr(0, message.length - 1).toLowerCase()
-        if(choices.affirmative.includes(message))
+        
+        isYes = choices.affirmativeRegex.filter(re => re.test(message)).length > 0
+        if(!isYes) 
+            isNo = choices.negativeGhostRiderRegex.filter(re => re.test(message)).length > 0
+
+        if(isYes)
             return "yup!"
-        else if(choices.negativeGhostRider.includes(message))
+        else if(isNo)
             return "nope!"
         else
             return defaultAction()
